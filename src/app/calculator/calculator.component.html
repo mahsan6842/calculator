@@ -2,7 +2,8 @@
 
 <div class="calculator">
   <div class="display">
-    <input type="text" class="calculator-screen" />
+    <!-- Bind the input to currentNumber, disable it for user input -->
+    <input type="text" class="calculator-screen" [(ngModel)]="currentNumber" readonly />
   </div>
 
   <div class="btn-container">
@@ -10,23 +11,25 @@
 
 
   <div class="calculator-buttons">
-    <button type="button" class="btn">7</button>
-    <button type="button" class="btn">8</button>
-    <button type="button" class="btn">9</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">7</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">8</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">9</button>
     <button type="button" class="btn btn-del">DEL</button>
-    <button type="button" class="btn">4</button>
-    <button type="button" class="btn">5</button>
-    <button type="button" class="btn">6</button>
-    <button type="button" class="btn btn-operator">+</button>
 
-    <button type="button" class="btn">1</button>
-    <button type="button" class="btn">2</button>
-    <button type="button" class="btn">3</button>
-    <button type="button" class="btn btn-operator">-</button>
-    <button type="button" class="btn">.</button>
-    <button type="button" class="btn">0</button>
-    <button type="button" class="btn btn-operator">/</button>
-    <button type="button" class="btn btn-operator">*</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">4</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">5</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">6</button>
+    <button (click)="set_Operation($event.target)"type="button" class="btn btn-operator">+</button>
+
+    <button (click)="appendNumber($event.target)" type="button" class="btn">1</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">2</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">3</button>
+    <button (click)="set_Operation($event.target)" type="button" class="btn btn-operator">-</button>
+
+    <button (click)="appendNumber($event.target)" type="button" class="btn">.</button>
+    <button (click)="appendNumber($event.target)" type="button" class="btn">0</button>
+    <button (click)="set_Operation($event.target)" type="button" class="btn btn-operator">/</button>
+    <button (click)="set_Operation($event.target)" type="button" class="btn btn-operator">*</button>
   </div>
 
 
