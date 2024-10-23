@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from "@angular/forms";
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [FormsModule, ReactiveFormsModule],
-
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
+  styleUrls: ['./calculator.component.css'],
   standalone: true,
-  styleUrls: ['./calculator.component.css']
+  imports: [FormsModule, ReactiveFormsModule],
 })
 export class CalculatorComponent {
   currentNumber: string = '0';
@@ -19,8 +17,6 @@ export class CalculatorComponent {
 
   appendNumber(target: any): void {
     const value = target.innerText;
-
-
     if (this.currentNumber === '0' || this.isNewNumber) {
       this.currentNumber = value === '.' ? '0.' : value;
       this.isNewNumber = false;

@@ -12,13 +12,88 @@
 }
 
 .display {
+  margin-top: 10px;
   margin-bottom: 20px;
+}
+.numb{
+  color: white;
+  display: flex;
+  margin-right: 20px;
+  justify-content: right;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+}
+
+.title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.theme {
+  display: flex;
+  color: white;
+  column-gap: 10px;
+}
+
+.theme span {
+  margin-right: 10px;
+  font-size: 11px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #131833;
+  transition: .4s;
+}
+
+.slider.round {
+  border-radius: 50px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: red;
+  transition: .4s;
 }
 
 
 .calculator-screen {
   width: 93%;
-  height: 50px;
+  height: 30px;
   background-color: #0d0033;
   color: #fff;
   font-size: 24px;
